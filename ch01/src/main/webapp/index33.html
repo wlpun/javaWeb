@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中国青年志愿者注册</title>
+</head>
+<body>
+    <h3>中国青年志愿者注册</h3>
+    <form action="RegServlet" method="post">
+        <label for="userName">用户名称</label>
+        <input type="text" name="userName" id="userName"> <br>
+        <label for="email">邮箱</label>
+        <input type="email" name="email" id="email"> <br>
+        <label for="realName">真实姓名</label>
+        <input type="text" name="realName" id="realName"> <br>
+        服务类别：
+        <input type="checkbox" name="serveType" value="construction"> 社区建设
+        <input type="checkbox" name="serveType" value="protect"> 环境保护
+        <input type="checkbox" name="serveType" value="competition"> 大型赛会
+        <input type="checkbox" name="serveType" value="help"> 应急救助 <br>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
