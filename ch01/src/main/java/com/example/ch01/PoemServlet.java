@@ -16,8 +16,8 @@ public class PoemServlet extends HttpServlet {
 //        response.setContentType("text/html");
 //        response.setCharacterEncoding("utf-8");
 //        PrintWriter out = response.getWriter();
-        request.setAttribute("h",180);
-        request.getRequestDispatcher("/ServletB").forward(request,response);
+//        request.setAttribute("h",180);
+//        request.getRequestDispatcher("/ServletB").forward(request,response);
 
 //        out.println("<html><body>");
 //        if(h.contains("Chrome")) out.println("您使用的是Chrome浏览器");
