@@ -12,8 +12,8 @@ public class SetCookie1Servlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         String name1 = request.getParameter("name");
         String pwd1 = request.getParameter("pwd");
-        String flag = request.getParameter("remember");
-        if (flag.equals("true")) {
+        String []flag = request.getParameterValues("remember");
+        if (flag[0].equals("true")) {
             Cookie name = new Cookie("name", name1);
             Cookie pwd = new Cookie("pwd", pwd1);
             response.addCookie(name);

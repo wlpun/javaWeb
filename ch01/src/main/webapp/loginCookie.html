@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous">
+</script>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -23,12 +27,12 @@
         }
         $(document).ready(function (){
             let cookieUserName = getCookieValueByKey("name");
-            $("name").val(cookieUserName);
+            $(".name").val(cookieUserName);
         })
     </script>
     <form action="SetCookie1Servlet" method="post">
         <strong>用户名：</strong>
-        <input type="text" name="name">
+        <input type="text" name="name" class="name">
         <br> <strong>密码：</strong>
         <input type="password" name="pwd">
         <br> <strong>记住我：</strong>
