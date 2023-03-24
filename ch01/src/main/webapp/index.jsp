@@ -5,9 +5,11 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+    <p>
+        21141132
+    </p>
+    <% for(int i = 1; i <= 10; i++) { %>
+        <%= i %>: 欢迎来到本系统<br>
+    <% } %>
 </body>
 </html>
