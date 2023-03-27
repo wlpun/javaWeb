@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="styles/energy.css">
 </head>
 <body>
+    <jsp:include page="include_header.jsp"></jsp:include>
 
+    <%--显示班级总能量数字，展示文字和形式自定义--%>
+    <%--html元素中签入JSP表达式模式--%>
+    <p> <%= "班级总能量" + request.getAttribute("total")%> </p>
+    <jsp:include page="include_footer.jsp"></jsp:include>
 </body>
 </html>

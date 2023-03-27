@@ -10,9 +10,13 @@
 <head>
     <title>蚂蚁森林</title>
     <link rel="stylesheet" href="styles/energy.css">
-
 </head>
 <body>
+    <jsp:include page="include_header.jsp"></jsp:include>
 
+    <%--显示msg信息，展示文字和形式自定义--%>
+    <%--html元素中签入JSP表达式模式--%>
+    <p> <%= request.getAttribute("msg")%> </p>
+    <jsp:include page="include_footer.jsp"></jsp:include>
 </body>
 </html>
