@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: 16628
   Date: 2023-03-27
-  Time: 16:34
+  Time: 16:35
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -14,9 +14,9 @@
 <body>
     <jsp:include page="include_header.jsp"></jsp:include>
 
-    <%--显示msg信息，展示文字和形式自定义--%>
+    <%--显示班级总能量数字，展示文字和形式自定义--%>
     <%--html元素中签入JSP表达式模式--%>
-    <p> <%= request.getAttribute("msg") %> </p>
+    <p> <%= "班级总能量" + request.getAttribute("total")%> </p>
     <jsp:include page="include_footer.jsp"></jsp:include>
 </body>
 </html>

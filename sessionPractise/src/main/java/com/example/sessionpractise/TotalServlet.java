@@ -20,19 +20,18 @@ public class TotalServlet extends HttpServlet {
         request.setCharacterEncoding("utf8");
         if (studentList == null) {
             request.setAttribute("msg", "系统未初始化");
-            response.sendRedirect(request.getContextPath() + "/energyMessage.jsp");
+            request.getRequestDispatcher("/energyMessage.jsp").forward(request,response);
         }
             //不是null  将变量强制类型转换为 ArrayList<Student> ,复制给变量 stuList
-        else {
-            stuList = (ArrayList<Student>) studentList;
-        }
+        else stuList = (ArrayList<Student>) studentList;
         //4.通过 stuList 变量，计算班级总能量数，结果写入request对象total属性，请求转发到energyTotal.jsp页面
         int sumEnergy = 0;
         for(Student stu: stuList) {
             sumEnergy += stu.getEnergy();
         }
         request.setAttribute("total", sumEnergy);
-        response.sendRedirect(request.getContextPath() + "/energyTotal.jsp");
+        session.setAttribute("total", sumEnergy);
+        request.getRequestDispatcher("/energyTotal.jsp").forward(request,response);
     }
 
     @Override

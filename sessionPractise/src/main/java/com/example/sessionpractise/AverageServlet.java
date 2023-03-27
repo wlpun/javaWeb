@@ -16,18 +16,23 @@ public class AverageServlet extends HttpServlet {
        //代码逻辑参考TotalServlet
         request.setCharacterEncoding("utf-8");
         HttpSession session = request.getSession();
-        ArrayList<Student> stuList = (ArrayList<Student>) session.getAttribute("stuList");
-        int size = stuList.size();
-        int sum = (int)request.getAttribute("total");
+        Object flag = session.getAttribute("stulist");
+        ArrayList<Student> stuList = new ArrayList<Student>();
+        int size = 0;
+        if(flag != null) {
+            stuList = (ArrayList<Student>) flag;
+            size = stuList.size();
+        }
+        int sum = (int) session.getAttribute("total");
         double avg;
         if(size > 0) {
             avg = (sum * 1.0) / size;
             request.setAttribute("avg", (int)avg);
-            response.sendRedirect(request.getContextPath() + "/energyAverage.jsp");
+            request.getRequestDispatcher("/energyAverage.jsp").forward(request,response);
         }
         else {
             request.setAttribute("msg", "系统未初始化");
-            response.sendRedirect(request.getContextPath() + "/energyMessage.jsp");
+            request.getRequestDispatcher("/energyMessage.jsp").forward(request,response);
         }
     }
 

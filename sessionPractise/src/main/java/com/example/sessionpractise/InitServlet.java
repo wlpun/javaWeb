@@ -36,7 +36,7 @@ public class InitServlet extends HttpServlet {
         //4.在request对象中写入msg属性，属性值为"系统初始化完成"
         request.setAttribute("msg", "系统初始化完成");
         //5.请求转发到 energyMessage.jsp页面,该页面中需要写jsp代码显示msg信息
-        response.sendRedirect(request.getContextPath() + "/energyMessage.jsp");
+        request.getRequestDispatcher("/energyMessage.jsp").forward(request,response);
     }
 
     @Override
