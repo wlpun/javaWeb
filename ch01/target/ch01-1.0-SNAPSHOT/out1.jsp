@@ -11,10 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-<%
-    HttpSession sessio = request.getSession();
-    Object name = sessio.getAttribute("name");
-    out.println(name);
-%>
+    <%
+        HttpSession sessio = request.getSession();
+        Object name = sessio.getAttribute("name");
+        out.println(name);
+    %>
 </body>
 </html>
