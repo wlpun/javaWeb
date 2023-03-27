@@ -17,7 +17,7 @@ public class PoemServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("poem", name);
         session.setAttribute("username", username);
-        request.getRequestDispatcher("/out1.jsp").forward(request,response);
+        request.getRequestDispatcher("/out1.jsp").forward(request, response);
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
         PrintWriter out = response.getWriter();
@@ -35,6 +35,6 @@ public class PoemServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 }

@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-    你的登录时间是<%= new Date() %>
+你的登录时间是<%= new Date() %>
 </body>
 </html>

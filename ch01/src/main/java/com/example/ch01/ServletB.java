@@ -19,7 +19,7 @@ public class ServletB extends HttpServlet {
 //        PrintWriter out = response.getWriter();
 //        out.println("<html><body>");
 //        out.println(height);
-        new Cookie("qwe","someone");
+        new Cookie("qwe", "someone");
 ////        if(h.contains("Chrome")) out.println("您使用的是Chrome浏览器");
 ////        if(h.contains("Edge")) out.println("您使用的是Edge浏览器");
 ////        if(h.contains("FireFox")) out.println("您使用的是FireFox浏览器");
@@ -32,6 +32,6 @@ public class ServletB extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 }

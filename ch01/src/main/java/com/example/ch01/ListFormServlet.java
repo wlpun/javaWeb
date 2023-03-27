@@ -20,13 +20,13 @@ public class ListFormServlet extends HttpServlet {
         response.setCharacterEncoding("utf-8");
         PrintWriter out = response.getWriter();
         out.println("爱好为");
-        for(String s: fav) {
+        for (String s : fav) {
             out.println(s);
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 }

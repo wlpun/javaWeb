@@ -18,7 +18,7 @@ public class DonateServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
         out.println("<h3>无偿献血是无私奉献、救死扶伤的崇高行为。</h3>");
-        out.println("<p>感谢您！"+bloodtype+"型血的"+name+"朋友。</p>");
+        out.println("<p>感谢您！" + bloodtype + "型血的" + name + "朋友。</p>");
 //        out.println(request.getContextPath());
 //        out.println(request.getServletPath());
 //        out.println(request.getQueryString()+";;");

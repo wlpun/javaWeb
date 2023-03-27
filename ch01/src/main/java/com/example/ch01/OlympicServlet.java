@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 public class OlympicServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Object sum =  request.getAttribute("sum");
+        Object sum = request.getAttribute("sum");
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html");
         response.setCharacterEncoding("utf-8");
@@ -23,6 +23,6 @@ public class OlympicServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 }

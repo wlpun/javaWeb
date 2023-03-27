@@ -12,7 +12,7 @@ public class SetCookie1Servlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         String name1 = request.getParameter("name");
         String pwd1 = request.getParameter("pwd");
-        String []flag = request.getParameterValues("remember");
+        String[] flag = request.getParameterValues("remember");
         if (flag[0].equals("true")) {
             Cookie name = new Cookie("name", name1);
             Cookie pwd = new Cookie("pwd", pwd1);
@@ -20,13 +20,12 @@ public class SetCookie1Servlet extends HttpServlet {
             response.addCookie(pwd);
         }
         if (name1.equals("admin") && pwd1.equals("pwd")) {
-            request.getRequestDispatcher("/indexCookie.jsp").forward(request,response);
-        }
-        else request.getRequestDispatcher("/loginCookie.html").forward(request,response);
+            request.getRequestDispatcher("/indexCookie.jsp").forward(request, response);
+        } else request.getRequestDispatcher("/loginCookie.html").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 }

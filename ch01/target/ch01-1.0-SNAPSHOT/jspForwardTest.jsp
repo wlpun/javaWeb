@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-    <jsp:forward page="pageTest1.jsp">
+<jsp:forward page="pageTest1.jsp">
 </body>
 </html>

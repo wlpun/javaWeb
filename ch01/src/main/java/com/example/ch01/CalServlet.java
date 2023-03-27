@@ -15,10 +15,11 @@ public class CalServlet extends HttpServlet {
         int num2 = Integer.valueOf(request.getParameter("silver"));
         int num3 = Integer.valueOf(request.getParameter("bronze"));
         request.setAttribute("sum", num1 + num2 + num3);
-        request.getRequestDispatcher("/OlympicServlet").forward(request,response);
+        request.getRequestDispatcher("/OlympicServlet").forward(request, response);
     }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 }

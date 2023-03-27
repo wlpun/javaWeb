@@ -9,35 +9,36 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
-        function getCookieValueByKey(key){
-            let val = "";
-            let cookies = document.cookie;
-            cookies = cookies.replace(/\s/,"");
-            let cookieArray = cookies.split(";");
-            for(let i=0; i<cookieArray.length; i++){
-                let cookie = cookieArray[i];
-                let kvArray = cookie.split("=");
-                if(kvArray[0] == key){
-                    val = kvArray[1];
-                    break;
-                }
+<script>
+    function getCookieValueByKey(key) {
+        let val = "";
+        let cookies = document.cookie;
+        cookies = cookies.replace(/\s/, "");
+        let cookieArray = cookies.split(";");
+        for (let i = 0; i < cookieArray.length; i++) {
+            let cookie = cookieArray[i];
+            let kvArray = cookie.split("=");
+            if (kvArray[0] == key) {
+                val = kvArray[1];
+                break;
             }
-            return val;
         }
-        $(document).ready(function (){
-            let cookieUserName = getCookieValueByKey("name");
-            $(".name").val(cookieUserName);
-        })
-    </script>
-    <form action="SetCookie1Servlet" method="post">
-        <strong>用户名：</strong>
-        <input type="text" name="name" class="name">
-        <br> <strong>密码：</strong>
-        <input type="password" name="pwd">
-        <br> <strong>记住我：</strong>
-        <input type="checkbox" name="remember" value="true">
-        <br> <input type="submit" value="登录">
-    </form>
+        return val;
+    }
+
+    $(document).ready(function () {
+        let cookieUserName = getCookieValueByKey("name");
+        $(".name").val(cookieUserName);
+    })
+</script>
+<form action="SetCookie1Servlet" method="post">
+    <strong>用户名：</strong>
+    <input type="text" name="name" class="name">
+    <br> <strong>密码：</strong>
+    <input type="password" name="pwd">
+    <br> <strong>记住我：</strong>
+    <input type="checkbox" name="remember" value="true">
+    <br> <input type="submit" value="登录">
+</form>
 </body>
 </html>

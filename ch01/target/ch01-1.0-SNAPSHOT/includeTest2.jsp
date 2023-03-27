@@ -11,9 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-    <%@include file="info.jsp" %>
-    <%
-        String msg = "欢迎！";
-    %>
+<%@include file="info.jsp" %>
+<%
+    String msg = "欢迎！";
+%>
 </body>
 </html>

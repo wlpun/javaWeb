@@ -11,9 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-    <hr>
-    <center>
-        公司电话号码：010-89574895,欢迎来电！
-    </center>
+<hr>
+<center>
+    公司电话号码：010-89574895,欢迎来电！
+</center>
 </body>
 </html>

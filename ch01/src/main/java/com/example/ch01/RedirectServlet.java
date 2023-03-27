@@ -14,11 +14,11 @@ public class RedirectServlet extends HttpServlet {
 //        request.setAttribute("qw", 123);
         ServletContext servletContext = request.getServletContext();
         servletContext.setAttribute("qw", 123);
-        response.sendRedirect(request.getContextPath()+"/ServletContextServlet");
+        response.sendRedirect(request.getContextPath() + "/ServletContextServlet");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 }

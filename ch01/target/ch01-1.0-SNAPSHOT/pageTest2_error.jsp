@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-    <% out.println("网页出现数学运算异常"); %>
+<% out.println("网页出现数学运算异常"); %>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sessionPractise:war">
+    <output-path>$PROJECT_DIR$/sessionPractise/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>sessionPractise</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="sessionPractise-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="sessionPractise:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -11,10 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-    <%
-        out.print("欢迎来到本系统");
-    %>
-    <br>
-    <%@include file="info.jsp"%>
+<%
+    out.print("欢迎来到本系统");
+%>
+<br>
+<%@include file="info.jsp" %>
 </body>
 </html>
