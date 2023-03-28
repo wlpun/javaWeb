@@ -11,11 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-<%
-    HttpSession session1 = request.getSession();
-    Object username = session1.getAttribute("username");
-    Object num = session1.getAttribute("num");
-%>
-<%= username + "\n" + num%>
+    <p> <%= request.getSession().getAttribute("username") %> </p>
+    <form action="LuckyResultServlet" method="post">
+        猜数字：<input type="text" name="n"> <br>
+    </form>
 </body>
 </html>

@@ -16,7 +16,7 @@
 
     <%--显示班级平均能朗数字（保留整数），展示文字和形式自定义--%>
     <%--html元素中签入JSP表达式模式--%>
-    <p> <%= request.getAttribute("avg") %> </p>
+    <p> <%= request.getServletContext().getAttribute("avg") %> </p>
     <jsp:include page="include_footer.jsp"></jsp:include>
 </body>
 </html>

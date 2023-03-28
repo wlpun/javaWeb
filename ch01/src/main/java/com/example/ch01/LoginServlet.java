@@ -13,10 +13,10 @@ public class LoginServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         String name = request.getParameter("username");
         String pwd = request.getParameter("pwd");
-        if (name.equals("21141132") && pwd.equals("123")) {
+        if (name.equals("123456") && pwd.equals("123")) {
             HttpSession session = request.getSession();
             session.setAttribute("username", name);
-            int num = new Random().nextInt(101);
+            int num = new Random().nextInt(2);
             session.setAttribute("num", num);
             response.sendRedirect(request.getContextPath() + "/lucky.jsp");
         } else response.sendRedirect(request.getContextPath() + "/login.html");

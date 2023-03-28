@@ -1,5 +1,6 @@
 package com.example.sessionpractise;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,6 +28,8 @@ public class AverageServlet extends HttpServlet {
         double avg;
         if(size > 0) {
             avg = (sum * 1.0) / size;
+            ServletContext servletContext = request.getServletContext();
+            servletContext.setAttribute("avg", (int)avg);
             request.setAttribute("avg", (int)avg);
             request.getRequestDispatcher("/energyAverage.jsp").forward(request,response);
         }
