@@ -10,9 +10,5 @@
         <module name="sessionPractise" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ch01" target="1.8" />
-      <module name="sessionPractise" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
