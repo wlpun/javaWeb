@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/ch01" />
+    <file type="web" url="file://$PROJECT_DIR$/JDBC" />
     <file type="web" url="file://$PROJECT_DIR$/sessionPractise" />
   </component>
   <component name="MavenProjectsManager">
@@ -10,10 +11,11 @@
       <list>
         <option value="$PROJECT_DIR$/ch01/pom.xml" />
         <option value="$PROJECT_DIR$/sessionPractise/pom.xml" />
+        <option value="$PROJECT_DIR$/JDBC/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-19" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
