@@ -23,7 +23,7 @@ public class GetCategoryServlet extends HttpServlet {
         }
         try {
             //2．获取数据库连接
-            conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/petstore","root","root");
+            conn= DriverManager.getConnection("jdbc:mysql://121.192.20.167:3306/petstore","21141132","21141132");
             //3．创建 Statement 对象，准备 SQL 语句
             stmt = conn.createStatement();
             String sql = "select id,name from category";
