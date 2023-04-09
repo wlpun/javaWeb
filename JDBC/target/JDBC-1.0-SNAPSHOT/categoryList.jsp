@@ -23,13 +23,11 @@
         <c:forEach var="category" items="${categoryList}" >
             <tr>
                 <td>${category.id}</td><td>${category.name}</td>
-                <td><a href="${pageContext.request.contextPath}/
-    GetPetServlet?category_id=${category.id}">查看</a></td>
+                <td><a href="${pageContext.request.contextPath}/GetPetServlet?category_id=${category.id}">查看</a></td>
             </tr>
         </c:forEach>
     </table>
     <hr>
-    <a href="${pageContext.request.contextPath}
-    /AddCategoryServlet?category_name=昆虫">新增分类</a>
+    <a href="${pageContext.request.contextPath}/AddCategoryServlet?category_name=昆虫">新增分类</a>
 </body>
 </html>

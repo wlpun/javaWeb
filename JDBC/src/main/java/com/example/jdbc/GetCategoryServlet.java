@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class GetCategoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
@@ -23,7 +24,7 @@ public class GetCategoryServlet extends HttpServlet {
         }
         try {
             //2．获取数据库连接
-            conn= DriverManager.getConnection("jdbc:mysql://121.192.20.167:3306/petstore","21141132","21141132");
+            conn= DriverManager.getConnection("jdbc:mysql://121.192.20.167:3306/petstore?characterEncoding=utf-8","21141132","21141132");
             //3．创建 Statement 对象，准备 SQL 语句
             stmt = conn.createStatement();
             String sql = "select id,name from category";

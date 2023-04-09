@@ -25,10 +25,10 @@ public class GetPetServlet extends HttpServlet {
         }
         try {
             //2．获取数据库连接
-            conn= DriverManager.getConnection("jdbc:mysql://121.192.20.167:3306/petstore","21141132","21141132");
+            conn= DriverManager.getConnection("jdbc:mysql://121.192.20.167:3306/petstore?characterEncoding=utf-8","21141132","21141132");
             //3．创建 Statement 对象，准备 SQL 语句
             stmt = conn.prepareStatement("select * from pets where category_id = ?");
-//设置 sql 语句中第 1 个 ? 所在位置的参数值
+            //设置 sql 语句中第 1 个 ? 所在位置的参数值
             stmt.setString(1,category_id);
             //4．使用 PreparedStatement 对象执行 SQL 语句
             rs = stmt.executeQuery();
