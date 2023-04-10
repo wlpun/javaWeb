@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<script src="scripts/jquery.min.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    $(function () {
+        $.ajax({
+            type: "POST",
+            url: "AjaxServlet",
+            data: {"name": $(".name").val()},
+            success: function (msg) {
+                $("#sp").text(msg);
+            }
+        })
+    })
+</script>
+<body>
+    <label>用户名称：<input type="text" name="name" class="name" value="admin"></label> <span id="sp"></span><br>
+    <label>邮箱地址：<input type="email" name="email" class="email"></label>
+</body>
+</html>
