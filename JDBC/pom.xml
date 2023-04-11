@@ -18,6 +18,27 @@
     </properties>
 
     <dependencies>
+        <!--https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <!-- Spring的JDBCTemplate，简化数据库操作 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.3.17</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+        <!-- Druid ?JDBC????????-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.2.8</version>
+        </dependency>
+        <!--https://mvnrepository.com/artifact/commons-logging/commons-logging-->
+        <!-- commons-logging?????????? -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.2</version>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
