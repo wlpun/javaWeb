@@ -6,6 +6,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "GetCountryServlet", value = "/GetCountryServlet")
 public class GetCountryServlet extends HttpServlet {
@@ -16,7 +17,7 @@ public class GetCountryServlet extends HttpServlet {
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
-        ArrayList<Country> countryArrayList = null;
+        List<Country> countryList = new ArrayList<>();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
@@ -28,10 +29,9 @@ public class GetCountryServlet extends HttpServlet {
             String sql = "select code, name, surfaceArea, population from country where continent = '%s'";
             sql = String.format(sql, continent);
             resultSet = statement.executeQuery(sql);
-            countryArrayList = new ArrayList<Country>();
             while(resultSet.next()) {
                 Country country = new Country(resultSet.getString("code"), resultSet.getString("name"), resultSet.getString("surfaceArea"), resultSet.getString("population"));
-                countryArrayList.add(country);
+                countryList.add(country);
             }
             resultSet.close();
             statement.close();
@@ -40,7 +40,7 @@ public class GetCountryServlet extends HttpServlet {
             e.printStackTrace();
         }
         HttpSession session = request.getSession();
-        session.setAttribute("countryArrayList", countryArrayList);
+        session.setAttribute("countryList", countryList);
         response.sendRedirect(request.getContextPath() + "/countryList.jsp");
     }
 

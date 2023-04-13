@@ -28,6 +28,6 @@
         </c:forEach>
     </table>
     <hr>
-    <a href="${pageContext.request.contextPath}/AddCategoryServlet2?category_name=昆虫">新增分类</a>
+    <a href="${pageContext.request.contextPath}/AddCategoryServlet2 ?category_name=昆虫">新增分类</a>
 </body>
 </html>

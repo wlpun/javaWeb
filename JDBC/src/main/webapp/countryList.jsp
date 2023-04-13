@@ -18,13 +18,16 @@
             <th>名称</th>
             <th>面积</th>
             <th>人口</th>
+            <th></th>
         </tr>
-        <c:forEach var="country" items="${countryArrayList}">
+        <c:forEach var="country" items="${countryList}">
             <tr>
                 <td>${country.code}</td><td>${country.name}</td>
                 <td>${country.surfaceArea}</td><td>${country.population}</td>
+                <td><a href="${pageContext.request.contextPath}/GetCityServlet?countryCode=${country.code}">显示城市</a></td>
             </tr>
         </c:forEach>
     </table>
+    <a href="${pageContext.request.contextPath}/searchCountry.html">重新查询</a>
 </body>
 </html>
