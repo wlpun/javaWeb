@@ -9,7 +9,11 @@
         <module name="ch01" />
         <module name="JDBC" />
         <module name="sessionPractise" />
+        <module name="Book_PetStore" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="JDBC2" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
