@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ch01" />
         <module name="JDBC" />
+        <module name="petStore" />
         <module name="sessionPractise" />
         <module name="Book_PetStore" />
       </profile>

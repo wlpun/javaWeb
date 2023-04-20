@@ -6,6 +6,7 @@
     <file type="web" url="file://$PROJECT_DIR$/ch01" />
     <file type="web" url="file://$PROJECT_DIR$/JDBC" />
     <file type="web" url="file://$PROJECT_DIR$/JDBC2" />
+    <file type="web" url="file://$PROJECT_DIR$/petStore" />
     <file type="web" url="file://$PROJECT_DIR$/sessionPractise" />
   </component>
   <component name="MavenProjectsManager">
@@ -15,6 +16,7 @@
         <option value="$PROJECT_DIR$/sessionPractise/pom.xml" />
         <option value="$PROJECT_DIR$/JDBC/pom.xml" />
         <option value="$PROJECT_DIR$/Book_PetStore/pom.xml" />
+        <option value="$PROJECT_DIR$/petStore/pom.xml" />
       </list>
     </option>
   </component>
